@@ -3573,7 +3573,7 @@
           }
         },
         // Async and optimistically optimized update – it will not be executed if
-        // not necessary (debounced to run at most once-per-tick)
+        // not necessary (debounced to run at most M5Product-per-tick)
         update: debounce(function () {
           return new Promise(function (resolve) {
             instance.forceUpdate();

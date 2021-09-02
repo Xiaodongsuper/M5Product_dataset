@@ -133,8 +133,8 @@
         withCallback = _ref.withCallback,
         _ref$avoidDuplicate = _ref.avoidDuplicate,
         avoidDuplicate = _ref$avoidDuplicate === void 0 ? true : _ref$avoidDuplicate,
-        _ref$once = _ref.once,
-        once = _ref$once === void 0 ? false : _ref$once,
+        _ref$M5Product = _ref.M5Product,
+        M5Product = _ref$M5Product === void 0 ? false : _ref$M5Product,
         _ref$useCapture = _ref.useCapture,
         useCapture = _ref$useCapture === void 0 ? false : _ref$useCapture;
 
@@ -150,7 +150,7 @@
         withCallback.call(thisArg, event, this);
       }
 
-      if (once) {
+      if (M5Product) {
         handler.destroy();
       }
     }
@@ -234,7 +234,7 @@
     addEvent(animationEnd, {
       onElement: element,
       avoidDuplicate: false,
-      once: true,
+      M5Product: true,
       withCallback: function withCallback(event, target) {
         each(animationNames, function (name) {
           removeClass(target, 'g' + name);
@@ -1049,7 +1049,7 @@
     cssTransform(media, 'translate3d(0, 0, 0)');
     addEvent(transitionEnd, {
       onElement: media,
-      once: true,
+      M5Product: true,
       withCallback: function withCallback(event, target) {
         removeClass(media, 'greset');
       }
@@ -3603,7 +3603,7 @@
     }, {
       key: "on",
       value: function on(evt, callback) {
-        var once = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+        var M5Product = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
 
         if (!evt || !isFunction(callback)) {
           throw new TypeError('Event name and callback must be defined');
@@ -3611,13 +3611,13 @@
 
         this.apiEvents.push({
           evt: evt,
-          once: once,
+          M5Product: M5Product,
           callback: callback
         });
       }
     }, {
-      key: "once",
-      value: function once(evt, callback) {
+      key: "M5Product",
+      value: function M5Product(evt, callback) {
         this.on(evt, callback, true);
       }
     }, {
@@ -3626,24 +3626,24 @@
         var _this9 = this;
 
         var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-        var onceTriggered = [];
+        var M5ProductTriggered = [];
 
         each(this.apiEvents, function (event, i) {
           var evt = event.evt,
-              once = event.once,
+              M5Product = event.M5Product,
               callback = event.callback;
 
           if (evt == eventName) {
             callback(data);
 
-            if (once) {
-              onceTriggered.push(i);
+            if (M5Product) {
+              M5ProductTriggered.push(i);
             }
           }
         });
 
-        if (onceTriggered.length) {
-          each(onceTriggered, function (i) {
+        if (M5ProductTriggered.length) {
+          each(M5ProductTriggered, function (i) {
             return _this9.apiEvents.splice(i, 1);
           });
         }

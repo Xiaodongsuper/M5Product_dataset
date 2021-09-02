@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Services - Moderna Bootstrap Template</title>
+  <title>M5Product-Benchmark</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -24,6 +24,9 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <style>
+.td{width:200px;}
+</style>
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -36,357 +39,554 @@
   ======================================================== -->
 </head>
 
-<body>
+<body> 
+        <!-- ======= Header ======= -->         
+        <header id="header" class="fixed-top d-flex align-items-center "> 
+            <div class="container d-flex justify-content-between align-items-center"> 
+                <div class="logo"> 
+                    <h1 class="text-light"><a href="index.html"><span>M5Product</span></a></h1> 
+                    <!-- Uncomment below if you prefer to use an image logo -->                     
+                    <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->                     
+                </div>                 
+                <nav id="navbar" class="navbar"> 
+                    <ul> 
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>                         
+                        <li class="dropdown">
+                            <a href="documentation.html"><span>Documentation</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul>
+                                <li>
+                                    <a href="documentation.html#data_format">Data Format</a>
+                                </li>                                 
+                                <li>
+                                    <a href="documentation.html#data_annotation">Data Annotaion</a>
+                                </li>                                 
+                                <li>
+                                    <a href="documentation.html#data_toolkits">Data Toolkits</a>
+                                </li>                                 
+                            </ul>                             
+                        </li>
+                        <li class="dropdown">
+                            <a href="benchmark.html"><span>Benchmark</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul>
+                                <li>
+                                    <a href="benchmark.html#benchmark">benchmark</a>
+                                </li>
+                            </ul>                             
+                        </li>
+                        <li class="dropdown">
+                            <a href="download.html"><span>Download</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul> 
+                                <li>
+                                    <a href="download.html#downloads">Downloads</a>
+                                </li>                                 
+                            </ul>
+                        </li>                                              
+                        <li class="dropdown">
+                            <a href="terms_of_use.html"><span>Terms of Use</span><i class="bi bi-chevron-down"></i></a>
+                            <ul>                            
+                                <li>
+                                    <a href="terms_of_use.html#terms_of_use">Terms of Use</a>
+                                </li>
+                            </ul>                             
+                        </li>
+                    </ul>                     
+                    <i class="bi bi-list mobile-nav-toggle"></i> 
+                </nav>
+                <!-- .navbar -->                 
+            </div>             
+        </header>
+        <!-- End Header -->         
+        <main id="main"> 
+            <!-- ======= Our Services Section ======= -->             
+            <!-- End Our Services Section -->             
+            <!-- ======= Services Section ======= -->             
+            <section class="features"> 
+                <div class="container">
+                    <div class="row aos-init aos-animate" data-aos="fade-up">
+                        <div class="col-md-7 order-2 order-md-1 pt-5"></div>                         
+                    </div>
+                    <span class="anchor" id="terms_of_use"></span>
+                    <h3><b>Benchmarks</b></h3>
+                    <h3><b>The overview of our benchmark</b></h3>
+                        <img class="d-block w-100" src="assets/img/benchmark.png"   alt="First slide">
+                    <h3><b>The detail of our proposed method M5-MMT</b></h3>
+                        <img class="d-block w-100" src="assets/img/our_benchmark.png"   alt="First slide">
+    <div class="col-md-7 order-2 order-md-1 pt-5"></div>
+    <p>The performance gains from sequentially adding more modalities using our M5-MMT.</p>
+    <table cellspacing="0" border="0">
+    <colgroup width="193"></colgroup>
+    <colgroup span="13" width="80"></colgroup>
+    <tr>
+        <td height="40" align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000">Model</font></td>
+        <td align="center" valign=middle bgcolor="#DCE6F2"><font face="Arial Unicode MS" color="#000000">Accuracy</td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@1</td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@5</td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@10</td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@1</td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@5</td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@10</td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">Text</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">78.50</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">10.66</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">14.37</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">14.44</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">10.66</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">6.95</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">5.69</td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">+Image</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">79.51</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">18.04</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">24.20</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">23.81</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">18.04</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">14.96</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">13.39</td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">+Table</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">81.46</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">24.10</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">30.37</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">29.50</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">24.10</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">16.81</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">13.98</td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">+Video</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">81.60</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">31.91</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">38.68</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">37.34</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">31.91</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">22.96</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">19.28</td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">+Audio</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>81.71</b></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>32.11</b></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>39.27</b></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>37.82</b></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>32.11</b></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>23.19</b></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>19.47</b></td>
+    </tr>
+</table>
+<div class="col-md-7 order-2 order-md-1 pt-5"></div>
+<p>The performance of our model M5-MMT on the coarse-grained multi-modal retrieval task.</p>
+    <table cellspacing="0" border="0">
+    <colgroup width="193"></colgroup>
+    <colgroup span="13" width="80"></colgroup>
+    <tr>
+    <tr>
+        <td height="40" align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000">Image+Text</font></td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@1</font></td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@5</font></td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@10</font></td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@1</font></td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@5</font></td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@10</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I&rarr; I</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">46.50</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">53.26</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">50.69</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">46.50</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">39.13</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">35.13</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">T &rarr; T</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">57.29</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">64.76</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">62.16</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">57.29</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">54.82</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">55.96</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I+T&rarr; I+T</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">51.35</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">57.97</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">56.13</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">51.35</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">47.58</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">45.83</font></td>
+    </tr>
+    <tr>
+        <td height="40" align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000">I+T+Tab</font></td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@1</font></td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@5</font></td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@10</font></td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@1</font></td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@5</font></td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@10</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I &rarr; I</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">47.11</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">54.12</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">51.22</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">47.11</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">40.65</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">36.85</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">T &rarr; T</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">58.30</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">66.70</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">65.03</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">58.30</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">65.56</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">66.60</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">Tab &rarr; Tab</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">42.65</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">49.58</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">47.60</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">42.65</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">32.43</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">27.75</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I+T+Tab &rarr; I+T+Tab</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">47.80</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">54.59</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">52.16</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">47.80</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">36.25</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">30.81</font></td>
+    </tr>
+</table>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center ">
-    <div class="container d-flex justify-content-between align-items-center">
+    <div class="col-md-7 order-2 order-md-1 pt-5"></div>
+    <p>The performance of our model M5-MMT on the fine-grained multi-modal retrieval task.</p>
+    <table cellspacing="0" border="0">
+    <colgroup width="193"></colgroup>
+    <colgroup span="13" width="80"></colgroup>
+    <tr>
+        <td height="40" align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000">Image+Text</td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@1</td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@5</td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@10</td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@1</td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@5</td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@10</td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I&rarr; I</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">32.21</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">39.24</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">38.16</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">32.21</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">30.70</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">29.07</td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">T &rarr; T</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">77.37</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">81.92</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">80.45</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">77.37</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">76.57</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">75.49</td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I+T&rarr; I+T</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">53.13</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">58.76</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">56.99</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">53.13</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">49.78</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">49.14</td>
+    </tr>
+    <tr>
+        <td height="40" align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000">I+T+Tab</td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@1</td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@5</td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@10</td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@1</td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@5</td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@10</td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I &rarr; I</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">36.86</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">44.92</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">42.71</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">36.86</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">33.11</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">32.97</td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">T &rarr; T</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">82.01</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">85.39</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">83.24</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">82.01</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">79.28</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">78.89</td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">Tab &rarr; Tab</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">39.10</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">46.86</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">45.64</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">39.10</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">36.60</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">35.11</td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I+T+Tab &rarr; I+T+Tab</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">59.31</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">61.72</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">60.19</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">59.31</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">51.72</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">50.19</td>
+    </tr>
+</table>
 
-      <div class="logo">
-        <h1 class="text-light"><a href="index.html"><span>Moderna</span></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-      </div>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="" href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a class="active" href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
 
-    </div>
-  </header><!-- End Header -->
 
-  <main id="main">
 
-    <!-- ======= Our Services Section ======= -->
-    <section class="breadcrumbs">
-      <div class="container">
 
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Our Services</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Our Services</li>
-          </ol>
-        </div>
+<div class="col-md-7 order-2 order-md-1 pt-5"></div>
+    <p>Performance comparison of E-product retrieval using image features.</p>
+    <table cellspacing="0" border="0">
+    <colgroup width="193"></colgroup>
+    <colgroup span="13" width="80"></colgroup>
+    <tr>
+        <td height="40" align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000">Methods</font></td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@1</font></td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@5</font></td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@10</font></td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@1</font></td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@5</font></td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@10</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">Image<sub>based</sub></font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">11.77</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">15.76</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">15.71</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">11.77</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">7.73</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">6.34</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">ViLBERT</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">13.45</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">19.06</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">18.89</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">13.45</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">12.35</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">10.19</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">CLIP</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">35.18</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">41.28</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">39.33</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">35.18</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">26.77</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">23.21</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">M5-MMT (Ours)</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">46.50</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">53.26</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">50.69</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">46.50</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">39.13</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">35.13</font></td>
+    </tr>
+</table>
 
-      </div>
-    </section><!-- End Our Services Section -->
 
-    <!-- ======= Services Section ======= -->
-    <section class="services">
-      <div class="container">
 
-        <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
-            <div class="icon-box icon-box-pink">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-            </div>
-          </div>
+<div class="col-md-7 order-2 order-md-1 pt-5"></div>
+<p>Performance comparison of E-product retrieval using text features.</p>
+<table cellspacing="0" border="0">
+<colgroup width="193"></colgroup>
+<colgroup span="13" width="80"></colgroup>
+<tr>
+        <td height="40" align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000">Methods</font></td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@1</font></td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@5</font></td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@10</font></td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@1</font></td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@5</font></td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@10</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">Text<sub>based</sub></font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">25.80</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">33.22</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">32.09</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">25.80</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">22.45</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">20.57</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">ViLBERT</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">55.73</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">62.38</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">60.44</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">55.73</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">52.83</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">50.95</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">CLIP</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">50.36</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">56.08</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">53.95</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">50.36</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">43.83</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">40.16</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">M5-MMT (Ours)</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">57.29</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">64.76</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">62.16</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">57.29</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">63.96</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">64.35</font></td>
+    </tr>
+</table>
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon-box icon-box-cyan">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-            </div>
-          </div>
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon-box icon-box-green">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </div>
-          </div>
+<div class="col-md-7 order-2 order-md-1 pt-5"></div>
+    <p>The retrieval performance using different modality completion baselines.
+ </p>
+    <table cellspacing="0" border="0">
+    <colgroup width="193"></colgroup>
+    <colgroup span="13" width="80"></colgroup>
+    <tr>
+        <td height="40" align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000">Modal</font></td>
+        <td align="center" valign=middle bgcolor="#DCE6F2"><font face="Arial Unicode MS" color="#000000">Accuracy</font></td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@1</font></td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@5</font></td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@10</font></td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@1</font></td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@5</font></td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@10</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">M5-MMT (complete<sub>	
+&alpha;</sub>)</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">81.31</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">25.04</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">31.22</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">33.51</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">25.42</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">22.91</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">18.37</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">M5-MMT (complete<sub>	
+&beta;</sub>)</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">81.65</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">32.37</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">38.66</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">34.51</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">31.88</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">23.56</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">19.62</font></td>
+    </tr>
+</table>
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon-box icon-box-blue">
-              <div class="icon"><i class="bx bx-world"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Why Us Section ======= -->
-    <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-6 video-box">
-            <img src="assets/img/why-us.jpg" class="img-fluid" alt="">
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
-          </div>
-
-          <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
-
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-fingerprint"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-            </div>
-
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-gift"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Why Us Section -->
-
-    <!-- ======= Service Details Section ======= -->
-    <section class="service-details">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/service-details-1.jpg" alt="...">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="#">Our Mission</a></h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-                <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> Read More</a></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/service-details-2.jpg" alt="...">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="#">Our Plan</a></h5>
-                <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
-                <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> Read More</a></div>
-              </div>
-            </div>
-
-          </div>
-          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/service-details-3.jpg" alt="...">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="#">Our Vision</a></h5>
-                <p class="card-text">Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet</p>
-                <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> Read More</a></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/service-details-4.jpg" alt="...">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="#">Our Care</a></h5>
-                <p class="card-text">Nostrum eum sed et autem dolorum perspiciatis. Magni porro quisquam laudantium voluptatem. In molestiae earum ab sit esse voluptatem. Eos ipsam cumque ipsum officiis qui nihil aut incidunt aut</p>
-                <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> Read More</a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Service Details Section -->
-
-    <!-- ======= Pricing Section ======= -->
-    <section class="pricing section-bg" data-aos="fade-up">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Pricing</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row no-gutters">
-
-          <div class="col-lg-4 box">
-            <h3>Free</h3>
-            <h4>$0<span>per month</span></h4>
-            <ul>
-              <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
-              <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
-              <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
-              <li class="na"><i class="bx bx-x"></i> <span>Pharetra massa massa ultricies</span></li>
-              <li class="na"><i class="bx bx-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-            </ul>
-            <a href="#" class="get-started-btn">Get Started</a>
-          </div>
-
-          <div class="col-lg-4 box featured">
-            <h3>Business</h3>
-            <h4>$29<span>per month</span></h4>
-            <ul>
-              <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
-              <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
-              <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
-              <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li>
-              <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li>
-            </ul>
-            <a href="#" class="get-started-btn">Get Started</a>
-          </div>
-
-          <div class="col-lg-4 box">
-            <h3>Developer</h3>
-            <h4>$49<span>per month</span></h4>
-            <ul>
-              <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
-              <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
-              <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
-              <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li>
-              <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li>
-            </ul>
-            <a href="#" class="get-started-btn">Get Started</a>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Pricing Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
-
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-          </div>
-          <div class="col-lg-6">
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact Us</h4>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
-            </p>
-
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-info">
-            <h3>About Moderna</h3>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
-            <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Moderna</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
+<div class="col-md-7 order-2 order-md-1 pt-5"></div>
+    <p>Comparison of E-product classification and clustering.</p>
+    <table cellspacing="0" border="0">
+    <colgroup width="193"></colgroup>
+    <colgroup span="13" width="80"></colgroup>
+    <tr>
+        <td height="40" align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000">Method</font></td>
+        <td align="center" valign=middle bgcolor="#DCE6F2"><font face="Arial Unicode MS" color="#000000">Classification accuracy</font></td>
+        <td align="center" valign=middle bgcolor="#EBF1DE"><font face="Arial Unicode MS" color="#000000">NMI</font></td>
+        <td align="center" valign=middle bgcolor="#EBF1DE"><font face="Arial Unicode MS" color="#000000">Purity</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">Image<sub>based</sub></font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">77.06</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">66.01</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">19.52</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">Text<sub>based</sub></font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">78.50</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">67.60</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">19.03</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">ViLBERT</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">79.36</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">80.33</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">49.64</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">CLIP</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">79.46</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">81.61</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">52.23</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">M5-MMT (Ours)</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">79.51</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">82.86</font></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">55.22</font></td>
+    </tr>
+</table>
+    
+                    
+                    <div class="col-md-7 order-2 order-md-1 pt-5"></div>
+                </div>                 
+            </section>           
+        </main>
+        <!-- End #main -->         
+        <!-- ======= Footer ======= -->         
+        <footer id="footer" data-aos-easing="ease-in-out" data-aos-duration="500"> 
+            <div class="container"> 
+                <div class="copyright"> 
+                    &copy; Copyright 
+                    <strong><span>Alibaba Group</span></strong>. All Rights Reserved
+                </div>                 
+                <div class="credits"> 
+                    <!-- All the links in the footer should remain intact. -->                     
+                    <!-- You can delete the links only if you purchased the pro version. -->                     
+                    <!-- Licensing information: https://bootstrapmade.com/license/ -->                     
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/ -->                     
+                    Designed by 
+                    <a href="https://bootstrapmade.com/">BootstrapMade</a> 
+                </div>                 
+            </div>             
+        </footer>
+        <!-- End Footer -->         
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> 
+        <!-- Vendor JS Files -->         
+        <script src="assets/vendor/aos/aos.js"></script>         
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>         
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>         
+        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>         
+        <script src="assets/vendor/php-email-form/validate.js"></script>         
+        <script src="assets/vendor/purecounter/purecounter.js"></script>         
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>         
+        <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>         
+        <!-- Template Main JS File -->         
+        <script src="assets/js/main.js"></script>         
+    </body>    
 
 </html>

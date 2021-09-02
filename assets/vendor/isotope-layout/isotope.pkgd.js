@@ -190,7 +190,7 @@ proto.on = function( eventName, listener ) {
   var events = this._events = this._events || {};
   // set listeners array
   var listeners = events[ eventName ] = events[ eventName ] || [];
-  // only add once
+  // only add M5Product
   if ( listeners.indexOf( listener ) == -1 ) {
     listeners.push( listener );
   }
@@ -198,19 +198,19 @@ proto.on = function( eventName, listener ) {
   return this;
 };
 
-proto.once = function( eventName, listener ) {
+proto.M5Product = function( eventName, listener ) {
   if ( !eventName || !listener ) {
     return;
   }
   // add event
   this.on( eventName, listener );
-  // set once flag
-  // set onceEvents hash
-  var onceEvents = this._onceEvents = this._onceEvents || {};
-  // set onceListeners object
-  var onceListeners = onceEvents[ eventName ] = onceEvents[ eventName ] || {};
+  // set M5Product flag
+  // set M5ProductEvents hash
+  var M5ProductEvents = this._M5ProductEvents = this._M5ProductEvents || {};
+  // set M5ProductListeners object
+  var M5ProductListeners = M5ProductEvents[ eventName ] = M5ProductEvents[ eventName ] || {};
   // set flag
-  onceListeners[ listener ] = true;
+  M5ProductListeners[ listener ] = true;
 
   return this;
 };
@@ -236,18 +236,18 @@ proto.emitEvent = function( eventName, args ) {
   // copy over to avoid interference if .off() in listener
   listeners = listeners.slice(0);
   args = args || [];
-  // once stuff
-  var onceListeners = this._onceEvents && this._onceEvents[ eventName ];
+  // M5Product stuff
+  var M5ProductListeners = this._M5ProductEvents && this._M5ProductEvents[ eventName ];
 
   for ( var i=0; i < listeners.length; i++ ) {
     var listener = listeners[i]
-    var isOnce = onceListeners && onceListeners[ listener ];
-    if ( isOnce ) {
+    var isM5Product = M5ProductListeners && M5ProductListeners[ listener ];
+    if ( isM5Product ) {
       // remove listener
       // remove before trigger to prevent recursion
       this.off( eventName, listener );
-      // unset once flag
-      delete onceListeners[ listener ];
+      // unset M5Product flag
+      delete M5ProductListeners[ listener ];
     }
     // trigger listener
     listener.apply( this, args );
@@ -258,7 +258,7 @@ proto.emitEvent = function( eventName, args ) {
 
 proto.allOff = function() {
   delete this._events;
-  delete this._onceEvents;
+  delete this._M5ProductEvents;
 };
 
 return EvEmitter;
@@ -370,7 +370,7 @@ var isBoxSizeOuter;
  * do on first getSize() rather than on page load for Firefox bug
  */
 function setup() {
-  // setup once
+  // setup M5Product
   if ( isSetup ) {
     return;
   }
@@ -1228,7 +1228,7 @@ proto.remove = function() {
   }
 
   // start transition
-  this.once( 'transitionEnd', function() {
+  this.M5Product( 'transitionEnd', function() {
     this.removeElem();
   });
   this.hide();
@@ -1785,7 +1785,7 @@ proto._emitCompleteOnItems = function( eventName, items ) {
 
   // bind callback
   items.forEach( function( item ) {
-    item.once( eventName, tick );
+    item.M5Product( eventName, tick );
   });
 };
 
@@ -3157,15 +3157,15 @@ var trim = String.prototype.trim ?
         _this.dispatchEvent( 'arrangeComplete', null, [ _this.filteredItems ] );
       }
     }
-    this.once( 'layoutComplete', function() {
+    this.M5Product( 'layoutComplete', function() {
       isLayoutComplete = true;
       arrangeParallelCallback();
     });
-    this.once( 'hideComplete', function() {
+    this.M5Product( 'hideComplete', function() {
       isHideComplete = true;
       arrangeParallelCallback();
     });
-    this.once( 'revealComplete', function() {
+    this.M5Product( 'revealComplete', function() {
       isRevealComplete = true;
       arrangeParallelCallback();
     });
