@@ -109,16 +109,16 @@
                     </div>
                     <span class="anchor" id="terms_of_use"></span>
                     <h3><b>Benchmarks</b></h3>
-                    <h3><b>The overview of our benchmark</b></h3>
+                    <h3><b>The overview of our model SCALE</b></h3>
                         <img class="d-block w-100" src="assets/img/our_benchmark.png"   alt="First slide">
                     <div class="col-md-7 order-2 order-md-1 pt-5"></div>
-                    <h3><b>The detail of our proposed method M5-MMT</b></h3>
-                        <img class="d-block w-100" src="assets/img/benchmark.png"   alt="First slide">
+                    <h3><b>The detail of our proposed Inter-Modality Contrastive Learning module</b></h3>
+                        <img class="d-block w-100" src="assets/img/SIMCL_demo.png"   alt="First slide">
     <div class="col-md-7 order-2 order-md-1 pt-5"></div>
-    <p>The performance gains from sequentially adding more modalities using our M5-MMT.</p>
+    <p>The (pretrain/finetune) performance gains from sequentially adding more modalities using SCALE on the subset (top) and the whole dataset (bottom). The retrieval performances are based on the features extracted from pretrain and finetune stages.</p>
     <table cellspacing="0" border="0">
     <colgroup width="193"></colgroup>
-    <colgroup span="13" width="80"></colgroup>
+    <colgroup span="13" width="120"></colgroup>
     <tr>
         <td height="40" align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000">Model</font></td>
         <td align="center" valign=middle bgcolor="#DCE6F2"><font face="Arial Unicode MS" color="#000000">Accuracy</td>
@@ -131,63 +131,134 @@
     </tr>
     <tr>
         <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">Text</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">78.50</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">10.66</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">14.37</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">14.44</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">10.66</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">6.95</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">5.69</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">77.42</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">47.70 / 65.10</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">53.63 / 68.39</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">51.59 / 66.99</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">47.70 / 65.10</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">30.96 / 44.89</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">24.15 / 33.44</td>
     </tr>
     <tr>
         <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">+Image</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">79.51</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">18.04</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">24.20</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">23.81</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">18.04</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">14.96</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">13.39</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">79.58</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">51.47 / 67.02</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">56.16 / 69.85</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">54.41 / 68.43</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">51.47 / 67.02</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">33.41 / 46.29</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">25.55 / 34.29</td>
     </tr>
     <tr>
         <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">+Table</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">81.46</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">24.10</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">30.37</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">29.50</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">24.10</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">16.81</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">13.98</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">82.83</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">57.14 / 67.97</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">61.71 / 70.34</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">59.64 / 69.38</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">57.14 / 67.97</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">38.02 / 46.85</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">28.99 / 34.36</td>
     </tr>
     <tr>
         <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">+Video</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">81.60</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">31.91</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">38.68</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">37.34</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">31.91</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">22.96</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">19.28</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">84.31</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">58.57 / 69.79</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">63.15 / 72.30</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">61.02 / 70.67</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">58.57 / 69.79</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">39.26 / 47.44</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">29.56 / 34.78</td>
     </tr>
     <tr>
         <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">+Audio</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>81.71</b></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>32.11</b></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>39.27</b></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>37.82</b></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>32.11</b></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>23.19</b></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>19.47</b></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">85.50</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">58.72 / 70.62</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">63.17 / 73.02</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">61.05 / 71.50</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">58.72 / 70.62</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">39.66 / 48.20</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">30.32 / 35.35</td>
+    </tr>
+    <tr>
+        <td height="2" align="center" valign=middle bgcolor="#FDEADA"></td>
+        <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+        <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+        <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+        <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+        <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+        <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+        <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">Text</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">81.11</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">55.82 / 69.47</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">60.74 / 72.74</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">59.02 / 71.79</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">55.82 / 69.47</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">36.99 / 48.76</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">28.04 / 35.84</td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">+Image</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">83.68</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">59.81 / 71.51</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">64.13 / 74.51</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">62.18 / 73.21</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">59.81 / 71.51</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">38.97 / 49.27</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">30.15 / 36.72</td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">+Table</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">84.63</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">61.32 / 72.34</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">65.53 / 74.86</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">63.62 / 73.47</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">61.32 / 72.34</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">40.66 / 49.77</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">30.78 / 36.95</td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">+Video</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">84.90</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">62.65 / 72.59</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">65.67 / 75.05</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">63.87 / 73.62</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">62.65 / 72.59</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">41.18 / 49.96</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">31.01 / 37.04</td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">+Audio</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><strong>86.57</strong></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">63.56  / 73.77</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">67.51 / 76.17</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">65.39 / 74.73</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">63.56 / 74.01</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">42.68 / 50.78</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">32.17 / 37.42</td>
+    </tr>
+    <tr>
+        <td height="2" align="center" valign=middle bgcolor="#FDEADA"></td>
+        <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+        <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+        <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+        <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+        <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+        <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+        <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
     </tr>
 </table>
 <div class="col-md-7 order-2 order-md-1 pt-5"></div>
-<p>The performance of our model M5-MMT on the coarse-grained multi-modal retrieval task.</p>
+<p>The performance of our model SCALE under different modality combinations on the coarse- and fine-grained multi-modal retrieval and classification tasks. In the following, I, T, Tab, V and A denote image, text, table, video and audio modalities, respectively.</p>
     <table cellspacing="0" border="0">
     <colgroup width="193"></colgroup>
-    <colgroup span="13" width="80"></colgroup>
+    <colgroup span="13" width="120"></colgroup>
     <tr>
     <tr>
-        <td height="40" align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000">Image+Text</font></td>
+        <td height="40" align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000">Modality Combinations</font></td>
+        <td height="40" align="center" valign=middle bgcolor="#DCE6F2"><font face="Arial Unicode MS" color="#000000">Accuracy</font></td>
         <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@1</font></td>
         <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@5</font></td>
         <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@10</font></td>
@@ -195,165 +266,294 @@
         <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@5</font></td>
         <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@10</font></td>
     </tr>
-    <tr>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I&rarr; I</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">46.50</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">53.26</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">50.69</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">46.50</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">39.13</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">35.13</font></td>
-    </tr>
-    <tr>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">T &rarr; T</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>57.29</b></font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>64.76</b></font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>62.16</b></font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>57.29</b></font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>54.82</b></font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>55.96</b></font></td>
-    </tr>
-    <tr>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I+T&rarr; I+T</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">51.35</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">57.97</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">56.13</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">51.35</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">47.58</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">45.83</font></td>
-    </tr>
-    <tr>
-        <td height="40" align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000">I+T+Tab</font></td>
-        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@1</font></td>
-        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@5</font></td>
-        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@10</font></td>
-        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@1</font></td>
-        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@5</font></td>
-        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@10</font></td>
-    </tr>
-    <tr>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I &rarr; I</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">47.11</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">54.12</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">51.22</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">47.11</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">40.65</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">36.85</font></td>
-    </tr>
-    <tr>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">T &rarr; T</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>58.30</b></font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>66.70</b></font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>65.03</b></font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>58.30</b></font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>65.56</b></font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>66.60</b></font></td>
-    </tr>
-    <tr>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">Tab &rarr; Tab</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">42.65</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">49.58</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">47.60</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">42.65</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">32.43</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">27.75</font></td>
-    </tr>
-    <tr>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I+T+Tab &rarr; I+T+Tab</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">47.80</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">54.59</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">52.16</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">47.80</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">36.25</font></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">30.81</font></td>
-    </tr>
+        <tr>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I+Tab</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">62.00</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">44.53 / 45.97</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">49.62 / 51.89</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">48.28 / 50.33</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">44.53 / 45.97</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">30.89 / 34.08</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">23.65 / 28.63</td>
+        </tr>
+        <tr>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I+V</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">34.57</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">20.57 / 36.29</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">26.78 / 42.72</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">26.41 / 41.38</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">20.57 / 36.29</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">14.71 / 26.52</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">11.78 / 22.34</td>
+        </tr>
+        <tr>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I+A</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">27.67</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">15.73 / 35.64</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">20.85 / 42.96</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">20.72 / 41.70</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">15.73 / 35.64</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">11.16 / 27.02</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">9.47 / 22.78</td>
+        </tr>
+        <tr>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I+T</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">79.58</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">67.02 / 62.20</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">69.85 / 66.97</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">68.43 / 64.21</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">67.02 / 62.20</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">46.29 / 49.85</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">34.29 / 42.36</td>
+        </tr>
+        <tr>
+            <td height="2" align="center" valign=middle bgcolor="#FDEADA"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+        </tr>
+        <tr>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I+T+V</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">80.34</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">67.35 / 63.05</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">70.29 / 67.37</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">68.95 / 64.62</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">67.35 / 63.05</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">46.45 / 50.85</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">34.33 / 43.02</td>
+        </tr>
+        <tr>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I+T+A</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">79.73</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">67.19 / 64.21</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">70.15 / 68.25</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">68.64 / 65.35</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">67.19 / 64.21</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">46.33 / 50.42</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">33.32 / 42.93</td>
+        </tr>
+        <tr>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I+Tab+V</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">63.09</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">45.94 / 47.33</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">51.32 / 53.33</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">49.78 / 51.28</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">45.94 / 47.33</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">31.69 / 35.81</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">24.12 / 30.05</td>
+        </tr>
+        <tr>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I+T+Tab</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">82.83</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">67.97 / 68.30</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">70.34 / 72.67</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">69.38 / 70.07</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">67.97 / 68.30</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">46.85 / 57.44</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">34.36 / 50.59</td>
+        </tr>
+        <tr>
+            <td height="2" align="center" valign=middle bgcolor="#FDEADA"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+        </tr>
+        <tr>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I+T+Tab+V</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">84.31</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">69.79 / 68.40</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">72.30 / 72.91</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">70.67 / 70.31</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">69.79 / 68.40</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">47.44 / 57.60</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">34.78 / 51.47</td>
+        </tr>
+        <tr>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I+Tab+A+V</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">63.54</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">47.24 / 48.24</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">52.07 / 53.89</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">50.41 / 51.89</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">47.24 / 48.24</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">32.19 / 36.29</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">24.47 / 30.74</td>
+        </tr>
+        <tr>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I+T+A+V</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">80.36</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">68.80 / 66.43</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">70.84 / 71.12</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">69.71 / 68.16</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">68.80 / 66.43</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">47.24 / 54.03</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">34.57 / 47.53</td>
+        </tr>
+        <tr>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I+T+Tab+A</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">84.33</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">70.23 / 68.97</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">72.59 / 73.07</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">70.94 / 70.77</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">70.23 / 68.97</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">47.58 / 57.89</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">35.33 / 51.60</td>
+        </tr>
+        <tr>
+            <td height="2" align="center" valign=middle bgcolor="#FDEADA"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+        </tr>
+        <tr>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I+T+Tab+A+V</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">85.50</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">70.62 / 69.25</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">73.02 / 74.08</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">71.50 / 71.02</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">70.62 / 69.25</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">48.20 / 58.76</td>
+            <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">35.35 / 52.05</td>
+        </tr>
+        <tr>
+            <td height="2" align="center" valign=middle bgcolor="#FDEADA"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+            <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+        </tr>
 </table>
 
     <div class="col-md-7 order-2 order-md-1 pt-5"></div>
-    <p>The performance of our model M5-MMT on the fine-grained multi-modal retrieval task.</p>
+    <p>Comparisons of image and text modalities on the subset (top) and the whole dataset (bottom).</p>
     <table cellspacing="0" border="0">
     <colgroup width="193"></colgroup>
     <colgroup span="13" width="80"></colgroup>
     <tr>
-        <td height="40" align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000">Image+Text</td>
+        <td height="40" align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000">Method</td>
         <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@1</td>
-        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@5</td>
-        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@10</td>
-        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@1</td>
-        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@5</td>
-        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@10</td>
+        <td height="40" align="center" valign=middle bgcolor="#DCE6F2"><font face="Arial Unicode MS" color="#000000">Accuracy</td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">NMI</td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Purity</td>
     </tr>
     <tr>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I&rarr; I</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">32.21</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">39.24</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">38.16</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">32.21</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">30.70</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">29.07</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">Image<sub>based</sub></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">15.17</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">27.67</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">63.62</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">54.86</td>
     </tr>
     <tr>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">T &rarr; T</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>77.37</b></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>81.92</b></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>80.45</b></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>77.37</b></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>76.57</b></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>75.49</b></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">BERT</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">47.70</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">77.42</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">76.35</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">68.80</td>
     </tr>
     <tr>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I+T&rarr; I+T</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">53.13</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">58.76</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">56.99</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">53.13</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">49.78</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">49.14</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">VL-BERT</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">49.31</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">78.13</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">80.51</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">71.91</td>
     </tr>
     <tr>
-        <td height="40" align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000">I+T+Tab</td>
-        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@1</td>
-        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@5</td>
-        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">mAP@10</td>
-        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@1</td>
-        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@5</td>
-        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">Prec@10</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">ViLBERT</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">49.18</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">78.24</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">80.51</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">71.91</td>
     </tr>
     <tr>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I &rarr; I</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">36.86</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">44.92</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">42.71</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">36.86</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">33.11</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">32.97</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">VisualBERT</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">49.20</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">78.41</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">81.23</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">72.39</td>
     </tr>
     <tr>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">T &rarr; T</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>82.01</b></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>85.39</b></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>83.24</b></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>82.01</b></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>79.28</b></td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>78.89</b></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">CLIP</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">49.39</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">78.35</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">81.75</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">72.50</td>
     </tr>
     <tr>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">Tab &rarr; Tab</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">39.10</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">46.86</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">45.64</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">39.10</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">36.60</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">35.11</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">UNITER</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">49.87</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">78.54</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">82.71</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">73.58</td>
     </tr>
     <tr>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">I+T+Tab &rarr; I+T+Tab</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">59.31</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">61.72</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">60.19</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">59.31</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">51.72</td>
-        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">50.19</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">CAPTURE</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">50.30</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">78.69</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">83.06</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">74.14</td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">SCALE (Ours)</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">51.47</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">79.58</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">84.23</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">75.81</td>
+    </tr>
+    <tr>
+        <td height="2" align="center" valign=middle bgcolor="#FDEADA"></td>
+        <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+        <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+        <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+        <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">Image<sub>based</sub></td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">22.67</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">30.14</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">67.49</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">59.64</td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">BERT</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">55.82</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">82.11</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">87.30</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">71.75</td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">CLIP</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">57.73</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">82.60</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">90.49</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">76.48</td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">SCALE (Ours)</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">59.81</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">83.68</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">92.01</td>
+        <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">78.34</td>
+    </tr>
+    <tr>
+        <td height="2" align="center" valign=middle bgcolor="#FDEADA"></td>
+        <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+        <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+        <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
+        <td align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000"></td>
     </tr>
 </table>
 
@@ -362,7 +562,7 @@
 
 
 
-<div class="col-md-7 order-2 order-md-1 pt-5"></div>
+<!-- <div class="col-md-7 order-2 order-md-1 pt-5"></div>
     <p>Performance comparison of E-product retrieval using image features.</p>
     <table cellspacing="0" border="0">
     <colgroup width="193"></colgroup>
@@ -550,7 +750,7 @@
         <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>82.86</b></font></td>
         <td align="center" valign=middle sdval="52" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000"><b>55.22</b></font></td>
     </tr>
-</table>
+</table> -->
     
                     
                     <div class="col-md-7 order-2 order-md-1 pt-5"></div>
